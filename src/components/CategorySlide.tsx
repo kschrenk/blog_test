@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Category } from "../App";
 import { useCategory } from "../store/category-context";
 

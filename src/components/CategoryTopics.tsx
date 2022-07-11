@@ -12,7 +12,7 @@ function CategoryTopics({ category }: CategoryTopicsProps) {
       <div className="flex justify-between items-baseline pb-6">
         <h3 className="text-2xl mr-6 tracking-tight">{`${category.label}`}</h3>
         <div className="basis-3/4">
-          <img src={category?.topicImg} />
+          <img src={category?.topicImg} alt={category.label} />
         </div>
         <Button onClick={() => console.log("Alle Topics ansehen")}>
           Alle&nbsp;ansehen

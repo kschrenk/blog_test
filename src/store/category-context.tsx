@@ -1,7 +1,5 @@
 import * as React from "react";
 
-type Action = { type: "set"; payload: string };
-type Dispatch = (action: Action) => void;
 type CategoryProviderProps = { children: React.ReactNode };
 
 const CategoryContext = React.createContext<

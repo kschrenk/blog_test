@@ -1,4 +1,4 @@
-import { ChangeEvent, ReactEventHandler } from "react";
+import { ChangeEvent } from "react";
 import searchIcon from "../ assets/icons/search.svg";
 
 type NavbarProps = {
@@ -24,7 +24,7 @@ function Navbar({ search, setSearch }: NavbarProps) {
                 type="submit"
                 className="p-1 focus:outline-none focus:shadow-outline"
               >
-                <img src={searchIcon} />
+                <img src={searchIcon} alt="Suche" />
               </button>
             </span>
             <input
