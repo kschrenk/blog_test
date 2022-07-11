@@ -1,12 +1,12 @@
 import { ChangeEvent, ReactEventHandler } from "react";
 import searchIcon from "../ assets/icons/search.svg";
 
-interface Props {
+type NavbarProps = {
   search: string;
   setSearch: (q: string) => void;
-}
+};
 
-export default function Header({ search, setSearch }: Props) {
+function Navbar({ search, setSearch }: NavbarProps) {
   const handleSearch = (e: ChangeEvent<HTMLInputElement>) => {
     return setSearch(e.target.value);
   };
@@ -42,3 +42,5 @@ export default function Header({ search, setSearch }: Props) {
     </header>
   );
 }
+
+export default Navbar;

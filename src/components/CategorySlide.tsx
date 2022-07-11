@@ -7,7 +7,7 @@ type CategorySlideProps = {
   category: Category;
 };
 
-export default function CategorySlide({ category, value }: CategorySlideProps) {
+function CategorySlide({ category, value }: CategorySlideProps) {
   const { setActive } = useCategory();
 
   return (
@@ -21,3 +21,5 @@ export default function CategorySlide({ category, value }: CategorySlideProps) {
     </div>
   );
 }
+
+export default CategorySlide;

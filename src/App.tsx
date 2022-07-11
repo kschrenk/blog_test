@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import CategoryHighlights from "./components/CategoryHighlights";
 import CategorySlider from "./components/CategorySlider";
 import CategoryTopics from "./components/CategoryTopics";
-import Header from "./components/Header";
+import Navbar from "./components/Navbar";
 import { useCategory } from "./store/category-context";
 
 function App() {
@@ -19,14 +19,13 @@ function App() {
   }, []);
 
   useEffect(() => {
-    // @TODO: Debounce search
     if (search !== "") console.log(search);
   }, [search]);
 
   return (
     <div className="App bg-gray-200">
       <div className="w-full max-w-md mx-auto bg-white">
-        <Header search={search} setSearch={setSearch} />
+        <Navbar search={search} setSearch={setSearch} />
         <main className="pb-12">
           <section>
             <div className="max-w-xs pt-4 pb-6 px-4">
@@ -120,7 +119,18 @@ export type Categories = {
 export type Category = {
   label: string;
   url: string;
-  topics?: Array<{ title: string; img: string }>;
+  topics?: Topic[];
   topicImg?: string;
-  highlights?: Array<{ title: string; teaser: string; img: string }>;
+  highlights?: Highlight[];
+};
+
+export type Topic = {
+  title: string;
+  img: string;
+};
+
+export type Highlight = {
+  title: string;
+  teaser: string;
+  img: string;
 };
