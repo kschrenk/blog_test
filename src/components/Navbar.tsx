@@ -1,5 +1,5 @@
 import { ChangeEvent } from "react";
-import searchIcon from "../ assets/icons/search.svg";
+import searchIcon from "../assets/icons/search.svg";
 
 type NavbarProps = {
   search: string;
